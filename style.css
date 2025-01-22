@@ -1,0 +1,114 @@
+body{ 
+    margin: 70px;
+    text-align: center;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    border: 5px dotted steelblue;
+    
+}
+header{
+    display: flex;
+    align-items: center;
+    ju
+}
+
+section{
+    display: flex;
+}
+
+.collag{
+    background-image: url(images/bg.png);
+    background-color: antiquewhite;
+    display: grid;
+gap: 20px;
+grid-template-rows: repeat(2,1fr);
+grid-template-columns: repeat(4,1fr);
+grid-template-areas: 
+"one one two three"
+"one one four five";
+
+}
+
+.collag :nth-child(1){
+    grid-area: one;
+}
+.collag :nth-child(2){
+    grid-area: two;
+}
+.collag :nth-child(3){
+    grid-area: three;
+}
+.collag :nth-child(4){
+    grid-area: four;
+}
+.collag :nth-child(5){
+    grid-area: five;
+}
+
+
+
+footer{
+    display: flex;
+    background-color: skyblue;
+    color: aliceblue;
+    padding: 20px;
+    margin-top: 50px;
+    justify-content: space-evenly;
+}
+
+.collag>div{
+    background-color: aliceblue;
+    width: 70%;
+    margin: 30px;
+    height: 80%;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    nav{
+        display: none;
+    }
+    header{
+        display:flex;
+        flex-direction: column-reverse;
+    }
+    section{
+        display: inline;
+    }
+    .collag{
+        grid-template-rows: repeat(2,1fr);
+        grid-template-columns: repeat(2,1fr);
+    }
+    .collag>div>img{
+        width:100%;
+    }
+    .hd{display: none;}
+
+    footer{
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+
+
+    
+  }
+
+
+  @media only screen and (min-width: 600px) {
+
+    .res{
+        display: none;
+    }
+  }
+
+
+  header>div{
+    padding: 40px;
+  }
